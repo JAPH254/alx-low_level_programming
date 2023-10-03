@@ -1,24 +1,32 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
+
 /**
- * _strdup - duplicate to new memory space location
- * @str: char
- * Return: 0
- */
+  *_strdup - rets ptr to newly alloc space in mem containing cp of stras prm
+  *@str : the string passed
+  *Return: pointer
+  */
+
 char *_strdup(char *str)
 {
-	char *aaa;
-	int i, r = 0;
+	int i, end;
+	char *array;
+
 	if (str == NULL)
 		return (NULL);
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	aaa = malloc(sizeof(char) * (i + 1));
-	if (aaa == NULL)
+
+	for (end = 0; end <= *str; end++)
+	{
+	}
+
+	end += 1;
+	array = malloc(sizeof(char) * end);
+
+	for (i = 0; i < end; i++)
+		array[i] = str[i];
+
+	if (array == NULL)
 		return (NULL);
-	for (r = 0; str[r]; r++)
-		aaa[r] = str[r];
-	return (aaa);
+	free(array);
+	return (array);
 }
