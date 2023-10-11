@@ -6,13 +6,10 @@
   *@cmp: pointer to a fucntion to be used to compare values
   *Return: index of the 1st element for which cmp func does not return 0
   */
-
 /*this function seems to return 0 if a number is not an int*/
-
 int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
-
 	if (size <= 0 || !array || !cmp)
 		return (-1);
 
