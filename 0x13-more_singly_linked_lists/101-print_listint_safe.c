@@ -1,13 +1,35 @@
 #include "lists.h"
-/**
- * print_listint_safe - Entry Point
- * @head: head
- * Return: 0
- */
-size_t print_listint_safe(const listint_t *head)
-{
-	if (head == NULL)
-		exit(98);
 
-	return (0);
+/**
+ * find_listint_loop - finds the loop in a linked list
+ * @head: linked list to search for
+ *
+ * Return: address of the node where the loop starts, or NULL
+ */
+listint_t *find_listint_loop(listint_t *head)
+{
+ listint_t *slow = head;
+ listint_t *fast = head;
+
+ if (!head)
+ return (NULL);
+
+ while (slow && fast && fast->next)
+ {
+ fast = fast->next->next;
+ slow = slow->next;
+ if (fast == slow)
+ {
+ slow = head;
+ while (slow != fast)
+ {
+ slow = slow->next;
+ fast = fast->next;
+ }
+ return (fast);
+ }
+ }
+
+ return (NULL);
 }
+
