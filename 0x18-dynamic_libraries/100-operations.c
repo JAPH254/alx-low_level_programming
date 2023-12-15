@@ -1,50 +1,50 @@
 /**
- * add - funciton that adds two ints
- * @a: integer
- * @b: integer
- * Return: sum
+ * add - addition
+ * @a: number
+ * @b: nuber
+ * Return: result
  */
 int add(int a, int b)
 {
-	return (a + b);
+      return (a + b);
 }
 /**
- * sub - funciton that subtracts two ints
- * @a: integer
- * @b: integer
- * Return: difference
+ * sub - addition
+ * @a: number
+ * @b: nuber
+ * Return: result
  */
 int sub(int a, int b)
 {
-	return (a - b);
+      return (a - b);
 }
 /**
- * mul - funciton that multiplies two ints
- * @a: integer
- * @b: integer
- * Return: multiple
+ * mul - addition
+ * @a: number
+ * @b: nuber
+ * Return: result
  */
 int mul(int a, int b)
 {
-	return (a * b);
+      return (a * b);
 }
 /**
- * div - funciton that divides two ints
- * @a: integer
- * @b: integer
- * Return: division
+ * div - addition
+ * @a: number
+ * @b: nuber
+ * Return: result
  */
 int div(int a, int b)
 {
-	return (a / b);
+      return (a / b);
 }
 /**
- * mod - funciton that modulo two ints
- * @a: integer
- * @b: integer
- * Return: remainder
+ * mod - addition
+ * @a: number
+ * @b: nuber
+ * Return: result
  */
 int mod(int a, int b)
 {
-	return (a % b);
+      return (a % b);
 }
